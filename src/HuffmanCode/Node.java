@@ -1,0 +1,26 @@
+package HuffmanCode;
+
+public class Node implements Comparable<Node>{//为了排序，要有接口Comparable
+    Byte data;//为了后期通用，写成byte
+    int weight;
+    Node left;
+    Node right;
+    public Node (Byte data, int weight){
+        this.data=data;
+        this.weight=weight;
+
+    }
+
+    @Override
+    public int compareTo(Node o) {
+        return o.weight-this.weight;
+    }
+
+    @Override
+    public String toString() {
+        return "Node{" +
+                "data=" + data +
+                ", weight=" + weight +
+                '}';
+    }
+}
